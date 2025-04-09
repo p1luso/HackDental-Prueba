@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 165 98% 13%;
+    --foreground: 0 0% 100%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Smooth scrolling for the entire page */
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  body,
+  #root {
+    @apply bg-background text-foreground;
+    font-family: "Lexend", sans-serif;
+    min-height: 100%;
+  }
+}
